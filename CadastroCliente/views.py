@@ -7,5 +7,6 @@ def index(request):
     lista_fruta = ['Laranja', 'Maça', 'Banana']
     context = {
         'nome' : meu_nome, 
+        'frutas' : lista_fruta
     }
     return render(request, 'index.html', context)
