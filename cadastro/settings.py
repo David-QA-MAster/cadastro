@@ -74,24 +74,24 @@ WSGI_APPLICATION = 'cadastro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# MYSQL
 DATABASES = {
      'default': {
-         'ENGINE': 'django.db.backends.mysql',
-         'NAME': 'cadastro-cliente',
-         'USER': 'root',
-         'PASSAWORD': '',
-         'HOST': 'localhost', 
-         'PORT': '3306',
-     }
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+    }
  }
+
+# MYSQL
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'django.db.backends.mysql',
+#          'NAME': 'cadastro-cliente',
+#          'USER': 'root',
+#          'PASSAWORD': '',
+#          'HOST': 'localhost', 
+#          'PORT': '3306',
+#      }
+#  }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
