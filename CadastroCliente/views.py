@@ -32,3 +32,12 @@ def lista_profissao(request):
     }
     
     return render(request, 'lista_profissoes.html', context)
+
+def detalhar_cliente(request, id):
+    cliente = cliente.objects.get(id = id)
+    context = {
+        "cliente": cliente
+
+
+    }
+    return render(request, "cliente_detalhar.html")
