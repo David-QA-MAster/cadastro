@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from CadastroCliente.models import Cliente
+from CadastroCliente.models import Cliente, Profissao
 
 # Create your views here.
 
@@ -15,9 +15,20 @@ def index(request):
 def listar_clientes(request):
     #busca todos os clientes cadastrados na tabela(admin)
     listar_clientes = Cliente.objects.all()
-    #o dicionario (variavel) context vai mandar pro tamplate 
+    lista_profissao = Profissao.objects.all()
+    #o dicionário (variavel) context vai mandar pro tamplate 
     context = {
         "cliente": listar_clientes,
+        "profissao": lista_profissao
     }
 
     return render(request, 'lista_clientes.html', context)
+
+def lista_profissao(request):
+    lista_profissoes = Profissao.objects.all()
+   
+    context = {
+        "Profissao": lista_profissoes,
+    }
+    
+    return render(request, 'lista_profissoes.html', context)

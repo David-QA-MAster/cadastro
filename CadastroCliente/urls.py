@@ -3,5 +3,6 @@ from CadastroCliente import views
 
 urlpatterns = [
     path('', views.index, name= 'index' ),
-    path('clientes' , views.listar_clientes, name='clientes')
+    path('clientes' , views.listar_clientes, name='clientes'),
+    path('Profissao' , views.lista_profissao, name='Profissao')
 ]
