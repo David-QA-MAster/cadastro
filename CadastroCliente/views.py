@@ -19,7 +19,7 @@ def listar_clientes(request):
     #o dicionário (variavel) context vai mandar pro tamplate 
     context = {
         "cliente": listar_clientes,
-        "profissao": lista_profissao
+        "profissao": lista_profissao,
     }
 
     return render(request, 'lista_clientes.html', context)
@@ -34,10 +34,9 @@ def lista_profissao(request):
     return render(request, 'lista_profissoes.html', context)
 
 def detalhar_cliente(request, id):
-    cliente = cliente.objects.get(id = id)
+    cliente = Cliente.objects.get(id = id)
     context = {
         "cliente": cliente
 
-
     }
-    return render(request, "cliente_detalhar.html")
+    return render(request, "cliente_detalhes.html", context)
