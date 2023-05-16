@@ -20,7 +20,7 @@
             <td>{{ cliente.data_nascimento|date:"d/m/Y" }}</td>
         <tr>
             <td>Endereçco:</td>
-            <td>{{ cliente.endereco }}, {{ cliente.numero }}, {{ cliente.bairro }}, {{cliente.cidade}}, Av. Marechal Tito 1500 - São Miguel Paulista</td>
+            <td>{{ cliente.endereco }}, {{ cliente.numero }}, {{ cliente.bairro }}, {{cliente.cidade}},</td>
         </tr>    
         <tr>
 
@@ -51,9 +51,17 @@
             <td>{{ cliente.profissao }}</td>
         <tr>
             <td>interesses:</td>
-            <td>{{ cliente.interesses.all|join:"," }}</td>
+            <td>
+                {{ cliente.interesses.all|join:"," }}</td>
+        <tr>
+            <td>telefones:</td>
+            <td>
+                {%for tel in telefones%}
+                    ({{ tel.ddd }}) {{ tel.numero }} <br>
+                {% endfor %}
+            </td>
         </tr>
-        </tr>
+        
        
 
     </table>

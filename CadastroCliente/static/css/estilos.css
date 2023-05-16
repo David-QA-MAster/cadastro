@@ -1,0 +1,20 @@
+
+
+*{
+    color:green;  
+    font-display: 14px;   
+    font-style: italic;       
+
+}
+
+
+h2,h3 {
+    color: blue;
+    font-weight: bold;
+
+}
+
+.textolaranja {
+
+    color: orange; 
+}
